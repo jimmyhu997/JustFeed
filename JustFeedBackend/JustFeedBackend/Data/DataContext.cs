@@ -24,7 +24,7 @@ namespace JustFeedBackend.Data
             modelBuilder.Entity<Resturant>()
                 .HasOne(res => res.User)
                 .WithMany(us => us.Resturants)
-                // is possible write only the string in function "HasForeignKey" for create a shodow link and don't write the table in the Model
+                // is possible write only the string in function "HasForeignKey" for create a shodow link and don't write the table in the Model test 
                 .HasForeignKey(res => res.UserID)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.NoAction);
